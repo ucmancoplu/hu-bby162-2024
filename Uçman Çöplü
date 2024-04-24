@@ -1,0 +1,83 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPYH7QPvkQ0kwK+qBW3tEXM",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/ucmancoplu/hu-bby162-2024/blob/main/U%C3%A7man%20%C3%87%C3%B6pl%C3%BC\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mUgbUaBw9Qty",
+        "outputId": "0d97da5e-fec4-4b6e-ea2e-a5df04710dae"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'siyah': 'black', 'kırmızı': 'red', 'yeşil': 'green', 'lacivert': 'navyblue', 'fare': 'mouse', 'beyaz': 'white', 'sarı': 'yellow', 'mavi': 'blue', 'klavye': 'keyboard', 'su': 'water'}\n",
+            "Sözlükten açıklamasını istediğiniz kelimeyi yazınız: su\n",
+            "water\n"
+          ]
+        }
+      ],
+      "source": [
+        "sozluk = {\"siyah\" : \"black\", \"kırmızı\" : \"red\", \"yeşil\" : \"green\", \"lacivert\" : \"navyblue\", \"fare\" : \"mouse\", \"beyaz\" : \"white\", \"sarı\" : \"yellow\", \"mavi\" : \"blue\", \"klavye\" : \"keyboard\", \"su\" : \"water\"}\n",
+        "#Sözlüğün yazdırılması\n",
+        "print(sozluk)\n",
+        "\n",
+        "#Sözlükte arama\n",
+        "aranan = input(\"Sözlükten açıklamasını istediğiniz kelimeyi yazınız: \")\n",
+        "print(sozluk[aranan])\n",
+        "\n",
+        "#Sözlüğe yeni kelime ekleme\n",
+        "kelime = input(\"Bir kelime giriniz: \")\n",
+        "anlam = input(\"Kelimenin anlamını giriniz: \")\n",
+        "sozluk[kelime] = anlam\n",
+        "\n",
+        "#Sözlükten kelime silme\n",
+        "print(sozluk)\n",
+        "silinecek = input(\"Silmek istediğiniz kelimeyi giriniz: \")\n",
+        "print(\"Silinecek kelime\", silinecek)\n",
+        "del sozluk[silinecek]\n",
+        "print(\"Silme tamamlandı.\")\n",
+        "print(sozluk)\n",
+        "\n",
+        "#Sözlükteki kelimenin anlamını güncelleme\n",
+        "print(sozluk)\n",
+        "guncel = input(\"Anlamı güncellenecek olan kelimeyi giriniz: \")\n",
+        "print(\"Anlamı güncellenecek kelime = \", guncel, \":\", sozluk[guncel])\n",
+        "yeni = input(\"Güncel anlamı giriniz: \")\n",
+        "sozluk[guncel] = yeni\n",
+        "print(\"Güncelleme tamamlandı.\")\n",
+        "print(sozluk)"
+      ]
+    }
+  ]
+}
